@@ -1,7 +1,7 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit]
   def index
-    @properties = Property.all
+    @properties = Properties.all
   end
 
   def show
@@ -22,6 +22,11 @@ class PropertiesController < ApplicationController
   end
 
   def edit
+    @propery = Propery.find(params[:id])
+  end
+
+  def update
+    raise params.inspect
   end
 
   # # def destroy
