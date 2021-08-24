@@ -1,0 +1,12 @@
+<div class="banner" style="background-color: #ECD5BB">
+   <div class="container">
+   <ul>
+  <% @properties.each do |property| %>
+    <%= link_to property_path(property) do %>
+      <li><%= property.name %> </li>
+    <% end %>
+  <% end %>
+</ul>
+
+  </div>
+</div>
