@@ -1,0 +1,14 @@
+<div class="form-inputs">
+  <div>
+    <%= simple_form_for(@property) do |f| %>
+      <%= f.input :address %>
+      <%= f.input :postcode %>
+      <%= f.input :price %>
+      <%= f.input :description %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+  <% end %>
+</div>
