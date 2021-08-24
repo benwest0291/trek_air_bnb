@@ -3,7 +3,7 @@
    <ul>
   <% @properties.each do |property| %>
     <%= link_to property_path(property) do %>
-      <li><%= property.name %> </li>
+      <li><%= property.address %> </li>
     <% end %>
   <% end %>
 </ul>
