@@ -1,12 +1,14 @@
 <div class="banner" style="background-color: #ECD5BB">
+
+</div>
    <div class="container">
+   <h1>Properties</h1>
    <ul>
   <% @properties.each do |property| %>
     <%= link_to property_path(property) do %>
-      <li><%= property.name %> </li>
+      <li><%= property.address %> </li>
     <% end %>
   <% end %>
 </ul>
 
-  </div>
 </div>
