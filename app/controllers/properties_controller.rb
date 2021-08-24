@@ -1,11 +1,10 @@
 class PropertiesController < ApplicationController
-  before_action :set_property, only: [:show, :edit]
+  before_action :set_property, only: [:show, :edit, :update]
   def index
-    @property = Property.all
+    @properties = Property.all
   end
 
   def show
-    @property = Property.find(params[:id])
   end
 
   def new
@@ -22,11 +21,15 @@ class PropertiesController < ApplicationController
   end
 
   def edit
-    @propery = Propery.find(params[:id])
   end
 
   def update
-    raise params.inspect
+    @property.update(property_params)
+    if @property.save
+      redirect_to property_path(@property), notice: 'Property was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   # # def destroy
@@ -41,6 +44,6 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit(:name)
+    params.require(:property).permit(:address, :postcode, :price, :description, :user_id, :wifi, :kitchen, :bathroom, :dog_friendly, :number_beds, :air_defense)
   end
 end
