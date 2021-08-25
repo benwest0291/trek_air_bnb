@@ -1,23 +1,30 @@
-<div class="banner" style="background-color: #ECD5BB">
-
-</div>
-   <div class="container">
+<div class="banner">
    <h1>Properties</h1>
-
+</div>
+<div class = "container">
 <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
   <div class="search-form-control form-group">
     <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-    <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
+    <button name="button" type="submit" class="btn btn-search">
+      <i class="fas fa-search" ></i> Search
     </button>
   </div>
 </form>
-   <ul>
-  <% @properties.each do |property| %>
-    <%= link_to property_path(property) do %>
-      <li><%= property.address %> </li>
-    <% end %>
-  <% end %>
-</ul>
 
+ <div class="card-container">
+  <% @properties.each do |property|%>
+  <%= link_to property_path(property) do %>
+  <div class="card-trip">
+    <img src=""/>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= property.address%></h2>
+        <p><%= property.description %></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= property.price  %> </h2>
+    </div>
+  </div>
+ <% end %>
+<% end %>
+</div>
 </div>
