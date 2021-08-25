@@ -1,10 +1,12 @@
 <div class="container">
   <div class="form-inputs">
     <%= simple_form_for(@property) do |f| %>
+      <%= f.input :name %>
       <%= f.input :address %>
       <%= f.input :postcode %>
       <%= f.input :price %>
       <%= f.input :description %>
+      <%= f.input :image_url %>
       <%= f.input :number_beds %>
       <%= f.input :wifi %>
       <%= f.input :kitchen %>
