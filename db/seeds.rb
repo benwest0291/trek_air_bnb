@@ -10,15 +10,16 @@ Booking.destroy_all
 Property.destroy_all
 User.destroy_all
 
-10.times do
+emails = ['phenela.luengo@gmail.com', 'hester25194@gmail.com', 'chi.ferr.1188@gmail.com', 'benwest0291@outlook.com']
+emails.each |email| do
   user = User.new(
-    email: Faker::Internet.email,
+    email: email,
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     username: Faker::Team.name.strip,
     address: Faker::Address.full_address,
     postcode: Faker::Address.postcode,
-    password: "123456"
+    password: "password"
   )
   user.save
 end
