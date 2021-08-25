@@ -1,13 +1,4 @@
-<div class="container">
-  <div class="form-inputs">
-    <%= simple_form_for(@property) do |f| %>
-      <%= f.input :address %>
-      <%= f.input :postcode %>
-      <%= f.input :price %>
-      <%= f.input :description %>
-    <div class="form-actions">
-      <%= f.submit class: "btn btn-ghost" %>
-    </div>
-    <% end %>
-  </div>
-</div>
+<%= render 'form', property: @property %>
+
+<%= link_to 'Show', @property %> |
+<%= link_to 'Back', property_path(@property) %>
