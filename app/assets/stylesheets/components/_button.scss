@@ -11,3 +11,15 @@
 .btn-ghost:hover {
   opacity: 1;
 }
+.btn-flat {
+  color: #0b0b0b;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background-color: #54627B;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background:#710117;
+  color: white;
+}
