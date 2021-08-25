@@ -26,11 +26,46 @@ end
 
 puts "new users created"
 
+buckingham = Property.new(
+  name: "Buckingham Palace",
+  address: "Westminster, London",
+  postcode: "SW1A 1AA",
+  price: 100000,
+  description: 'Buckingham Palace is the London residence and administrative headquarters of the monarch of the United Kingdom. Located in the City of Westminster, the palace is often at the centre of state occasions and royal hospitality.',
+  image_url: 'https://cdn.londonandpartners.com/-/media/images/london/visit/whats-on/event-pages/buckinghampalace1920x1080.jpg?mw=640&hash=40096BE681415B8B7AAB77D542F889D7E174DBBC',
+  user: User.all.sample,
+  wifi: [true, false].sample,
+  kitchen: [true, false].sample,
+  bathroom: [true, false].sample,
+  air_defense: [true, false].sample,
+  dog_friendly: [true, false].sample,
+  number_beds: 755
+)
+buckingham.save
+
+white = Property.new(
+  name: "White House",
+  address: "	1600 Pennsylvania Avenue NW, Washington, D.C.",
+  postcode: "20500",
+  price: 950000,
+  description: 'The White House is the official residence and workplace of the president of the United States.',
+  image_url: 'https://www.thoughtco.com/thmb/Uyn9K1t-HCB2Lr7WJVMaBEa7RUI=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/WhiteHouse-9a73875f70db4451b7c8c88175accc04.jpg',
+  user: User.all.sample,
+  wifi: [true, false].sample,
+  kitchen: [true, false].sample,
+  bathroom: [true, false].sample,
+  air_defense: [true, false].sample,
+  dog_friendly: [true, false].sample,
+  number_beds: 132
+)
+white.save
 
 100.times do
   property = Property.new(
+    name: Faker::Nation.capital_city,
     address: Faker::Address.full_address,
     postcode: Faker::Address.postcode,
+    image_url: Faker::Placeholdit.image,
     price: (10..1000).to_a.sample,
     description: Faker::Coffee.notes,
     user: User.all.sample,
