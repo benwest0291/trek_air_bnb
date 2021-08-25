@@ -6,14 +6,11 @@
   height: 80px;
   padding: 0px 50px;
   color: #fff;
-  bottom: 0;
-  position: absolute;
   width: 100%;
 }
 .footer-links {
   display: flex;
   align-items: center;
-
 }
 .footer-links a {
   color: #fff;
@@ -27,4 +24,22 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
 }
