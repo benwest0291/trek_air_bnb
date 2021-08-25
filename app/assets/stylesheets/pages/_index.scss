@@ -1,2 +1,13 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.card-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body {
+  background-color:#F9F9FB;
+}
