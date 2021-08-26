@@ -60,7 +60,7 @@ white = Property.new(
 )
 white.save
 
-100.times do
+10.times do
   property = Property.new(
     name: Faker::Nation.capital_city,
     address: Faker::Address.full_address,

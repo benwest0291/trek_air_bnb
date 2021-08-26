@@ -1,9 +1,36 @@
-<div>
-  <h2><%= @property.address %></h2>
-  <p><%= @property.postcode %></p>
-  <p><%= @property.description %></p>
-  <p> £<%= @property.price %></p>
+<div class="banner">
+   <h1><%= @property.address %></h1>
 </div>
 
-<%= link_to 'Edit', edit_property_path(@property) %>
+<div class="test">
+<div class="show-container">
+
+  <div class="description-card" >
+   <h3>Description<h3>
+    <p><%= @property.description %></p>
+    <p>Post Code: <%= @property.postcode %></p>
+  </div>
+
+  <div class="price-card">
+    <h1> Price - £<%= @property.price %>💰💰</h1>
+  </div>
+</div>
+  <div>
+  <p>Test Div</p>
+  <p>Test Div</p>
+  <p>Test Div</p>
+  <p>Test Div</p>
+
+  <p>Test Div</p>
+  <p>Test Div</p>
+  <p>Test Div</p>
+
+</div>
+</div>
+</div>
+
+
+<div class="back-edit">
+<%= link_to 'Edit | ', edit_property_path(@property) %>
 <%=  link_to 'Back', properties_path %>
+</div>
