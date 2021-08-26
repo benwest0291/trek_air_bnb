@@ -1,12 +1,8 @@
 class BookingsController < ApplicationController
-  def new
-    @booking = Booking.new
-    @property = Property.find(params[:property_id])
-  end
+  before_action :new_booking, only: [:new, :create]
+  before_action :find_booking, only: [:edit, :update]
 
   def create
-    @booking = Booking.new(booking_params)
-    @property = Property.find(params[:property_id])
     @booking.user = current_user
     @booking.property = @property
     if @booking.save!
@@ -16,9 +12,32 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @property.user = current_user
+    @booking.property = @property
+    if @booking.update(booking_params)
+      redirect_to property_path(@property)
+    else
+      render :edit
+    end
+  end
+
   private
 
+  def new_booking
+    @booking = Booking.new(booking_params)
+    @property = Property.find(params[:property_id])
+  end
+
+  def find_booking
+    @property = Property.find(params[:property_id])
+    @booking = Booking.find(params[:id])
+  end
+
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :confirmed)
   end
 end
