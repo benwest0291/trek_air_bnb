@@ -1,0 +1,35 @@
+.price-card{
+  border: solid 2px black;
+  margin: 5em;
+  border-radius: 20px;
+  padding: 4em;
+  background-color: green;
+  text-align: center;
+  max-width: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.description-card {
+  border: solid 2px black;
+  margin: 5em;
+  border-radius: 20px;
+  padding: 4em;
+  background-color: #ECD5BB;
+  text-align: center;
+  max-width: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.description-card p{
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.back-edit{
+  text-align: center;
+}
+
+.test{
+  display: flex;
+  justify-items: row;
+}
