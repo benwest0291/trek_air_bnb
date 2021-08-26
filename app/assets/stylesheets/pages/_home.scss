@@ -1,20 +1,19 @@
 // Specific CSS for your home-page
 .card-container{
-  margin-top: 60px;
-  margin-bottom: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-body{
-  background-color: #ECD5BB;
+body {
+  background-color:#F9F9FB;
 }
 
-.headings{
+.headings {
   text-align: center;
   margin: 20px;
   color: #000;
-  text-shadow: 1px 1px 3px white;
+  text-shadow: 1px 1px 3px grey;
   font-weight: bold;
+  margin-top: 60px;
 }

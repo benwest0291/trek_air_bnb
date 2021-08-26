@@ -9,6 +9,13 @@
   max-height: 400px;
 }
 
+.card-trip:hover {
+  background-color: #710117;
+  color: white;
+  transition-timing-function: ease-in-out;
+  transition: 0.4s;
+}
+
 .card-trip > img {
   height: 200px;
   width: 100%;
