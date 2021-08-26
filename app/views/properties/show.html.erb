@@ -16,7 +16,7 @@
   </div>
 
   <div class="booking-button">
-      <a class="btn bg-success btn-lg" href="/properties/:property_id/bookings/new">Book Me 🚀</a>
+      <%= link_to 'Book me', new_property_booking_path(@property), class: "btn bg-success btn-lg" %>
   </div>
 
 <div class = "container-map">
