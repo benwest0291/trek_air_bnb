@@ -4,6 +4,8 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -13,3 +15,4 @@
 .nav-link {
   color: #fff !important;
 }
+

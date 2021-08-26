@@ -2,7 +2,6 @@ class Property < ApplicationRecord
   belongs_to :user
   validates :address, presence: true, uniqueness: true
   validates :description, length: { minimum: 25 }
-  validates :postcode, :price, :name, :image_url, presence: true
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
@@ -13,4 +12,6 @@ class Property < ApplicationRecord
   #  using: {
   #    tsearch: { prefix: true }
   #   }
+
+  validates :postcode, :price, :name, presence: true
 end
