@@ -88,7 +88,6 @@ puts "new properties created"
   booking = Booking.new(
     property: Property.all.sample,
     user: User.all.sample,
-    rating: (1..5).to_a.sample,
     start_date: start_date,
     end_date: end_date
   )

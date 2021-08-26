@@ -1,0 +1,14 @@
+<h2>Edit and confirm Booking</h2>
+
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <%= simple_form_for([@property, @booking]) do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.input :confirmed %>
+      <%= f.submit 'Confirm now', class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Back', property_path(@property) %>
