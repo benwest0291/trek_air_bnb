@@ -2,11 +2,20 @@ class BookingsController < ApplicationController
   before_action :new_booking, only: [:new, :create]
   before_action :find_booking, only: [:edit, :update]
 
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
+  def new
+    @booking = Booking.new
+  end
+
   def create
+    @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.property = @property
     if @booking.save!
-      redirect_to property_path(@property), notice: 'Property was successfully booked.'
+      redirect_to property_booking_path(@property, @booking), notice: 'Property was successfully booked.'
     else
       render :new
     end
@@ -28,8 +37,8 @@ class BookingsController < ApplicationController
   private
 
   def new_booking
-    @booking = Booking.new(booking_params)
     @property = Property.find(params[:property_id])
+    # @booking = Booking.new(booking_params)
   end
 
   def find_booking
