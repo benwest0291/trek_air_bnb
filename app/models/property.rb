@@ -1,5 +1,6 @@
 class Property < ApplicationRecord
   belongs_to :user
+  has_many :bookings
   validates :address, presence: true, uniqueness: true
   validates :description, length: { minimum: 25 }
 
