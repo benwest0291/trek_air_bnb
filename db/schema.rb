@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 2021_08_26_143751) do
     t.boolean "air_defense"
     t.string "name"
     t.string "image_url"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
