@@ -3,9 +3,8 @@
   margin: 5em;
   border-radius: 20px;
   padding: 4em;
-  background-color: green;
+  background-color: maroon;
   text-align: center;
-  max-width: 50%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
@@ -16,7 +15,6 @@
   padding: 4em;
   background-color: #ECD5BB;
   text-align: center;
-  max-width: 50%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
@@ -25,11 +23,16 @@
   font-size: 20px;
 }
 
+.btn{
+  text-align: center !important;
+}
+
 .back-edit{
+  margin: 30px;
   text-align: center;
 }
 
-.test{
-  display: flex;
-  justify-items: row;
+.booking-button{
+  text-align: center;
+  margin: 30px;
 }

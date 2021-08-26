@@ -2,35 +2,35 @@
    <h1><%= @property.address %></h1>
 </div>
 
-<div class="test">
+<div class="show-side-by-side">
 <div class="show-container">
 
   <div class="description-card" >
-   <h3>Description<h3>
-    <p><%= @property.description %></p>
-    <p>Post Code: <%= @property.postcode %></p>
+      <h3>Description<h3>
+      <p><%= @property.description %></p>
+      <p>Post Code: <%= @property.postcode %></p>
   </div>
 
   <div class="price-card">
     <h1> Price - £<%= @property.price %>💰💰</h1>
   </div>
-</div>
-  <div>
-  <p>Test Div</p>
-  <p>Test Div</p>
-  <p>Test Div</p>
-  <p>Test Div</p>
 
-  <p>Test Div</p>
-  <p>Test Div</p>
-  <p>Test Div</p>
+  <div class="booking-button">
+      <a class="btn bg-success btn-lg" href="/properties/:property_id/bookings/new">Book Me 🚀</a>
+  </div>
 
-</div>
-</div>
+<div class = "container-map">
+    <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     </div>
+    </div>
+  </div>
 </div>
 
 
 <div class="back-edit">
-<%= link_to 'Edit | ', edit_property_path(@property) %>
-<%=  link_to 'Back', properties_path %>
+  <%= link_to 'Edit | ', edit_property_path(@property) %>
+  <%=  link_to 'Back', properties_path %>
 </div>
