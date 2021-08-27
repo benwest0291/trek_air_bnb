@@ -1,0 +1,10 @@
+<div>
+  <% @bookings.each do |booking| %>
+    <p>
+      <%= booking.property.name %></p>
+      <%= booking.start_date %></p>
+      <%= booking.end_date %></p>
+      <%= booking.confirmed %>
+    </p>
+  <% end %>
+</div>
