@@ -84,7 +84,7 @@ leeds = Property.new(
   image_url: "https://upload.wikimedia.org/wikipedia/commons/0/05/Leeds_castle.JPG",
   price: (10_000..100_000).to_a.sample,
   description: "Leeds Castle is a castle in Kent, England, 5 miles (8 km) southeast of Maidstone. It is built on islands in a lake formed by the River Len to the east of the village of Leeds.",
-  user: User.all.sample,
+  user: User.first,
   wifi: [true, false].sample,
   kitchen: [true, false].sample,
   bathroom: [true, false].sample,
