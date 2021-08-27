@@ -95,7 +95,7 @@ leeds = Property.new(
 leeds.save
 
 penhurst = Property.new(
-  name: "Penhurst Palace",
+  name: "Penhurst Place",
   address: "Penshurst, Tonbridge",
   postcode: "TN11 8DG",
   image_url: "https://www.historichouses.org/app/uploads/2021/02/penshurst-place-730x385.jpg",
