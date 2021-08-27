@@ -1,8 +1,10 @@
 <%# <h2>Select a date</h2> %>
+
+
 <div class="container">
-<h2>Select a date</h2>
-  </div>
-<div class="container">
+ <div class= "title">
+   <h2>Select a date</h2>
+ </div>
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
     <%= simple_form_for([@property, @booking]) do |f| %>
       <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
