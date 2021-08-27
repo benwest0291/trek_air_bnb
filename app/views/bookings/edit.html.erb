@@ -1,4 +1,6 @@
-<h2>Edit and confirm Booking</h2>
+<div class="back-edit">
+  <h2>Edit and confirm this Booking</h2>
+</div>
 
 <div class="container">
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
@@ -6,9 +8,13 @@
       <%= f.input :start_date %>
       <%= f.input :end_date %>
       <%= f.input :confirmed %>
+      <div class="back-edit">
       <%= f.submit 'Confirm now', class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
 </div>
 
-<%= link_to 'Back', property_path(@property) %>
+<div class="back-edit">
+  <%= link_to 'Back', property_path(@property) %>
+</div>
