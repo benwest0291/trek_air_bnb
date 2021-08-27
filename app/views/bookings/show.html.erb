@@ -1,2 +1,17 @@
-<p><%= @booking.start_date %></p>
-<p><%= @booking.end_date %></p>
+<div class="banner">
+   <h1><%= @booking.property.name %></h1>
+</div>
+
+<div class="booking-confrim">
+  <h2>Booking Confirmed 😃</h2>
+  <p><%= @booking.start_date %></p>
+  <p> - </p>
+  <p><%= @booking.end_date %></p>
+</div>
+
+<div class="description-card" >
+      <h3>Description<h3>
+      <p><%= @booking.property.description %></p>
+      <p><%= @booking.property.address %></p>
+      <p>Post Code: <%= @booking.property.postcode %></p>
+</div>

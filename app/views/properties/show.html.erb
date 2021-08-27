@@ -1,5 +1,5 @@
 <div class="banner">
-   <h1><%= @property.address %></h1>
+   <h1><%= @property.name %></h1>
 </div>
 
 <div class="show-side-by-side">
@@ -8,7 +8,14 @@
   <div class="description-card" >
       <h3>Description<h3>
       <p><%= @property.description %></p>
+      <p><%= @property.address %></p>
       <p>Post Code: <%= @property.postcode %></p>
+      <p><i class="fas fa-wifi"> - Wifi</i></p>
+      <p><i class="fas fa-utensils"> - Kitchen</i></p>
+      <p><i class="fas fa-bath"> - Bathroom</i></p>
+      <p><i class="fas fa-dog"> - Dog friendly</i></p>
+      <p><i class="fas fa-bed"> - No. Beds</i></p>
+      <p><i class="fas fa-rocket"> - Rocket pad</i></p>
   </div>
 
   <div class="price-card">
