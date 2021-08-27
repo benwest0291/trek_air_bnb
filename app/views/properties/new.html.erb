@@ -1,9 +1,11 @@
-<div class="container">
-  <h1 class="search-heading">New Property</h1>
+<div class="back-edit">
+  <h3 class="search-heading">Add a New Property</h1>
 </div>
 
-<%= render 'form', property: @property %>
-
 <div class="container">
+<%= render 'form', property: @property %>
+</div>
+
+<div class="back-edit">
   <%= link_to 'Back', properties_path %>
 </div>

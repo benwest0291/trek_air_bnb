@@ -1,4 +1,12 @@
-<%= render 'form', property: @property %>
+<div class="back-edit">
+  <h3 class="search-heading">Edit Your Property</h1>
+</div>
 
-<%= link_to 'Show', @property %> |
-<%= link_to 'Back', property_path(@property) %>
+<div class="container">
+  <%= render 'form', property: @property %>
+</div>
+
+<div class="back-edit">
+  <%= link_to 'All Properties', @property %> |
+  <%= link_to 'Back', property_path(@property) %>
+</div>
