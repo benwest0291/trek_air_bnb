@@ -1,10 +1,46 @@
-<div>
-  <% @bookings.each do |booking| %>
-    <p>
-      <%= booking.property.name %></p>
-      <%= booking.start_date %></p>
-      <%= booking.end_date %></p>
-      <%= booking.confirmed %>
-    </p>
-  <% end %>
+<div class="banner">
+   <h1>Bookings</h1>
+</div>
+
+<div class="container">
+  <div class="back-edit">
+    <h2>My Property Bookings</h2>
+      <% @properties.each do |property| %>
+        <% property.bookings.each do |booking| %>
+          <div class="card-product mb-3">
+            <img src="<%= property.image_url%>">
+            <div class="card-product-infos">
+              <h2><%= property.name %></p></h2>
+              <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
+                <%if booking.confirmed %>
+                <p>This booking is now confirmed.</p>
+                <p><%=  link_to 'Cancel this booking', edit_property_booking_path(property, booking), class: "btn btn-danger" %></p>
+                <% else %>
+                <p>This booking is not yet confirmed.</p>
+                <p><%=  link_to 'Confirm this booking', edit_property_booking_path(property, booking), class: "btn btn-success" %></p>
+                <% end%>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+
+  <div class="back-edit">
+    <h2>My Bookings</h2>
+      <% @bookings.each do |booking| %>
+        <div class="card-product mb-3">
+          <img src="<%= booking.property.image_url%>">
+            <div class="card-product-infos">
+              <h2><%= booking.property.name %></p></h2>
+              <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
+                <%if booking.confirmed %>
+                <p>This booking is now confirmed.</p>
+                <p><%=  link_to 'Cancel this booking', edit_property_booking_path(booking.property, booking), class: "btn btn-danger" %></p>
+                <% else %>
+                <p>This booking is not yet confirmed.</p>
+                <% end %>
+            </div>
+        </div>
+      <% end %>
+  </div>
 </div>

@@ -1,5 +1,5 @@
-<div class="banner">
-   <h1><%= @property.address %></h1>
+<div class="banner" style= "background-image: url(<%= "\"#{@property.image_url}\"" %>);">
+   <h1><%= @property.name %></h1>
 </div>
 
 <div class="show-side-by-side">
@@ -8,7 +8,14 @@
   <div class="description-card" >
       <h3>Description<h3>
       <p><%= @property.description %></p>
+      <p><%= @property.address %></p>
       <p>Post Code: <%= @property.postcode %></p>
+      <p><i class="fas fa-bed"></i> x <%= @property.number_beds %></p>
+      <p><i style="<%= @property.wifi ? "color: green;" : "color: red;"%>" class="fas fa-wifi"></i> - Wifi</p>
+      <p><i style="<%= @property.kitchen ? "color: green;" : "color: red;"%>" class="fas fa-utensils"></i> - Kitchen</p>
+      <p><i style="<%= @property.bathroom ? "color: green;" : "color: red;"%>" class="fas fa-bath"></i> - Bathroom</p>
+      <p><i style="<%= @property.dog_friendly ? "color: green;" : "color: red;"%>" class="fas fa-dog"></i> - Dog friendly</p>
+      <p><i style="<%= @property.air_defense ? "color: green;" : "color: red;"%>" class="fas fa-rocket"></i> - Rocket pad</p>
   </div>
 
   <div class="price-card">
@@ -33,4 +40,4 @@
 <div class="back-edit">
   <%= link_to 'Edit | ', edit_property_path(@property) %>
   <%=  link_to 'Back', properties_path %>
-</div>
+        </div>

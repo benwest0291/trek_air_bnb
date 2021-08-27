@@ -3,8 +3,8 @@ class BookingsController < ApplicationController
   before_action :find_booking, only: [:edit, :update]
 
   def index
-    @bookings = Booking.all
-    @property = Property.find(params[:property_id])
+    @bookings = Booking.where(user_id: current_user.id)
+    @properties = Property.where(user_id: current_user.id)
   end
 
   def show
@@ -34,7 +34,7 @@ class BookingsController < ApplicationController
     @property.user = current_user
     @booking.property = @property
     if @booking.update(booking_params)
-      redirect_to property_path(@property)
+      redirect_to bookings_path
     else
       render :edit
     end
@@ -44,7 +44,6 @@ class BookingsController < ApplicationController
 
   def new_booking
     @property = Property.find(params[:property_id])
-    # @booking = Booking.new(booking_params)
   end
 
   def find_booking

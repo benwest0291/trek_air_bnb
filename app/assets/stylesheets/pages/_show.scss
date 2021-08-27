@@ -20,6 +20,7 @@
   background-color: maroon;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  color: #fff;
 }
 
 .description-card {
@@ -36,3 +37,33 @@
   margin-top: 40px;
   font-size: 20px;
 }
+
+
+.btn{
+  text-align: center !important;
+}
+
+.back-edit{
+  margin: 30px;
+  text-align: center;
+}
+
+.booking-button{
+  text-align: center;
+  margin: 30px;
+}
+
+.booking-confrim{
+    border: solid 2px black;
+    margin: 5em;
+    border-radius: 20px;
+    padding: 2em;
+    background-color: green;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.booking-confrim p{
+  font-size: 20px;
+}
+
