@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @property = Property.find(params[:property_id])
   end
 
   def create
