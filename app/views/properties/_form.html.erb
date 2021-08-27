@@ -1,17 +1,19 @@
 <div class="container">
   <div class="form-inputs">
     <%= simple_form_for(@property) do |f| %>
-      <%= f.input :name %>
-      <%= f.input :address %>
-      <%= f.input :postcode %>
-      <%= f.input :price %>
-      <%= f.input :description %>
-      <%= f.input :number_beds %>
-      <%= f.input :wifi %>
-      <%= f.input :kitchen %>
-      <%= f.input :bathroom %>
-      <%= f.input :dog_friendly %>
-      <%= f.input :air_defense %>
+      <%= f.input :name, placeholder: 'Property Name', label: false %>
+      <%= f.input :address, placeholder: 'Property Address', label: false %>
+      <%= f.input :postcode, placeholder: 'Postcode', label: false %>
+      <%= f.input :price, placeholder: 'Price', label: false %>
+      <%= f.input :description, placeholder: 'Description', label: false %>
+      <%= f.input :number_beds, placeholder: 'Number of Beds', label: false %>
+      <div class="facilities">
+        <%= f.input :wifi, boolean_style: :inline %>
+        <%= f.input :kitchen, boolean_style: :inline %>
+        <%= f.input :bathroom, boolean_style: :inline %>
+        <%= f.input :dog_friendly, boolean_style: :inline %>
+        <%= f.input :air_defense, boolean_style: :inline %>
+      </div>
     <div class="form-actions">
       <%= f.submit class: "btn btn-primary" %>
     </div>

@@ -2,6 +2,11 @@ class BookingsController < ApplicationController
   before_action :new_booking, only: [:new, :create]
   before_action :find_booking, only: [:edit, :update]
 
+  def index
+    @bookings = Booking.all
+    @property = Property.find(params[:property_id])
+  end
+
   def show
     @booking = Booking.find(params[:id])
   end
