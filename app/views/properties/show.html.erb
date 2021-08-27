@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" style= "background-image: url(<%= "\"#{@property.image_url}\"" %>);">
    <h1><%= @property.name %></h1>
 </div>
 
@@ -10,12 +10,12 @@
       <p><%= @property.description %></p>
       <p><%= @property.address %></p>
       <p>Post Code: <%= @property.postcode %></p>
-      <p><i class="fas fa-wifi"> - Wifi</i></p>
-      <p><i class="fas fa-utensils"> - Kitchen</i></p>
-      <p><i class="fas fa-bath"> - Bathroom</i></p>
-      <p><i class="fas fa-dog"> - Dog friendly</i></p>
-      <p><i class="fas fa-bed"> - No. Beds</i></p>
-      <p><i class="fas fa-rocket"> - Rocket pad</i></p>
+      <p><i class="fas fa-bed"></i> x <%= @property.number_beds %></p>
+      <p><i style="<%= @property.wifi ? "color: green;" : "color: red;"%>" class="fas fa-wifi"></i> - Wifi</p>
+      <p><i style="<%= @property.kitchen ? "color: green;" : "color: red;"%>" class="fas fa-utensils"></i> - Kitchen</p>
+      <p><i style="<%= @property.bathroom ? "color: green;" : "color: red;"%>" class="fas fa-bath"></i> - Bathroom</p>
+      <p><i style="<%= @property.dog_friendly ? "color: green;" : "color: red;"%>" class="fas fa-dog"></i> - Dog friendly</p>
+      <p><i style="<%= @property.air_defense ? "color: green;" : "color: red;"%>" class="fas fa-rocket"></i> - Rocket pad</p>
   </div>
 
   <div class="price-card">
