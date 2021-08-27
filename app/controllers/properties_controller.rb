@@ -1,15 +1,20 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update]
+
   def index
     @properties = Property.all
 
+    if params[:query].present?
+      @properties = Property.near(params[:query])
+    end
+
     @markers = @properties.geocoded.map do |property|
-      {
-        lat: property.latitude,
-        lng: property.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { property: property }),
-        image_url: helpers.asset_url('marker.png')
-      }
+    {
+    lat: property.latitude,
+    lng: property.longitude,
+    info_window: render_to_string(partial: "info_window", locals: { property: property }),
+    image_url: helpers.asset_url('marker2.png')
+    }
     end
   end
 
