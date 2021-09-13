@@ -1,1 +1,2 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Airbnb Web App 🏠.
+This is our first web app created by @benwest0291 @Alex25194 @ferrari1188 @phenelagayle during airbnb week @ le wagon bootcamp in London.
